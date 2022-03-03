@@ -1,10 +1,14 @@
 body{
     margin: 0;
     padding: 0;
+    background-color: #eee;
 }
-ul,li,p{
+ul,li,p,dl,dd{
     margin: 0;
     padding: 0;
+}
+li{
+    list-style: none;
 }
 header{
     width: 100%;
@@ -48,4 +52,197 @@ header .bigHeadBox img{
     font: 15px/15px sans-serif;
     color: #fff;
     
+}
+.contentWrap{
+    padding: 30px 10px 30px 30px;
+    box-sizing: border-box;
+}
+.contentWrap dl{
+    /* width: calc(50% - 20px); */
+    margin: 0 0 50px 0;
+    /* float: left; */
+    text-align: center;
+}
+.contentWrap dl dt{
+    font: bold 20px/20px sans-serif;
+    color:#9aab43;
+    border-bottom: 1px solid #ddd;
+    margin: 0 0 10px 0;
+    padding: 0 0 10px 0;
+    letter-spacing: 2px;
+}
+.contentWrap dl dt::before{
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 10px 5px 0;
+    vertical-align: middle;
+    opacity: 0.7;
+}
+
+/* experienceCont */
+.experienceCont dt::before{
+    background: transparent url(img/experience.png)no-repeat center/100% auto;
+}
+.experienceCont ul li{
+    display: flex;
+    margin: 0 0 30px 0;
+    justify-content: center;
+}
+.experienceCont ul li .workYear{
+    margin: 0 20px 0 0;
+    width: 60px;
+    height: 100%;
+    text-align: right;
+    color: #367c5b;
+    font: bold 15px/20px sans-serif;
+}
+.experienceCont ul li .workDetail{
+    position: relative;
+    text-align: left;
+    display: flex;
+}
+.experienceCont ul li .workDetail::after{
+    content: '';
+    width: 1px;
+    height: calc(100% - 30px);
+    background-color: #367c5b;
+    display: inline-block;
+    position: absolute;
+    bottom: -20px;
+    left: -35px;
+}
+.experienceCont ul li .workDetail.presentWork::after{
+    height: 40px;
+}
+.experienceCont ul li h3{
+    margin: 0;
+    color: #367c5b;
+    font: bold 17px/23px sans-serif;
+}
+.experienceCont ul li .company{
+    width: 195px;
+    margin: 0 15px 0 0;
+}
+.experienceCont ul li .workContent {
+    color: #888;
+    font: 15px/20px sans-serif;
+    margin: 0;
+    border-left: 1px solid #ddd;
+    padding: 0 0 0 15px;
+    width: 200px;
+}
+.experienceCont ul li .companyName {
+    font: 15px/23px sans-serif;
+}
+
+/* .skillCont */
+.skillCont dt::before{
+    background: transparent url(img/settings.png)no-repeat center/100% auto;
+}
+.skillCont .skillBox h4 {
+    font: bold 15px/30px sans-serif;
+    margin: 0;
+    display: inline-block;
+    width: 170px;
+    color: #333;
+    text-align: left;
+}
+.skillCont .skillBox ul {
+    display:inline-block;
+    vertical-align: middle;
+}
+.skillCont .skillBox li {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #ddd;
+    border-radius: 100%;
+    margin: 0 3px 0 0;
+}
+.skillCont li.solid {
+    background-color: #43936d;
+}
+
+/* educationCont */
+.contentWrap .educationCont dt::before{
+    background: transparent url(img/graduation-cap.png)no-repeat center/100% auto;
+    width: 23px;
+}
+.educationCont span {
+    color: #888;
+    font: 13px/20px sans-serif;
+}
+.educationCont span i {
+    font: 12px/20px sans-serif;
+}
+.educationCont p{
+    color: #367c5b;
+    font: bold 15px/23px sans-serif;
+}
+
+/* languagesCont */
+.languagesCont dt::before{
+    background: transparent url(img/chat.png)no-repeat center/100% auto;
+}
+.languagesCont dd{
+    display: flex;
+    justify-content: center;
+}
+.languagesCont .langBox {
+    width: 90px;
+    height: 90px;
+    border: 5px solid #367c5b;
+    border-radius: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 10px 0 0;
+    padding: 5px;
+    justify-content: center;
+}
+.languagesCont .langBox span {
+    font: bold 15px/23px sans-serif;
+    display: block;
+    color: #333;
+}
+.languagesCont .langBox i {
+    font: 12px/23px sans-serif;
+    white-space: nowrap;
+}
+
+/* mottoCont */
+.contentWrap .mottoCont dt::before{
+    background: transparent url(img/mind.png)no-repeat center/100% auto;
+    width: 23px;
+    height: 23px;
+}
+.mottoCont span{
+    color: #367c5b;
+    font: bold 17px/25px sans-serif;
+}
+.mottoCont p{
+    color: #333;
+    font: 15px/25px sans-serif;
+}
+
+/* likeCont */
+.likeCont dt::before{
+    background: transparent url(img/like.png)no-repeat center/100% auto;
+}
+.likeCont dd{
+    padding: 10px 0 0 0;
+}
+.likeCont ul li{
+    min-width: 100px;
+    text-align: center;
+    margin: 0 0 20px 0;
+    display: inline-block;
+}
+.likeCont h4{
+    margin: 0;
+    font: 15px/25px sans-serif;
+    color: #333;
 }
