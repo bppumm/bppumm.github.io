@@ -47,20 +47,28 @@ header .bigHeadBox img{
 .basicDataBox ul li i{
     font:bold 13px/13px sans-serif;
     color: burlywood;
+    padding: 0 0 0 15px;
 }
 .basicDataBox ul li p{
     font: 15px/15px sans-serif;
     color: #fff;
     
 }
+.basicDataBox .dataBox .address i{
+    background: transparent url(img/home.png)no-repeat center left / 10px auto;
+}
+.basicDataBox .dataBox .phone i{
+    background: transparent url(img/phone-call.png)no-repeat center left / 10px auto;
+}
+.basicDataBox .dataBox .email i{
+    background: transparent url(img/email.png)no-repeat center left / 10px auto;
+}
 .contentWrap{
     padding: 30px 10px 30px 30px;
     box-sizing: border-box;
 }
 .contentWrap dl{
-    /* width: calc(50% - 20px); */
     margin: 0 0 50px 0;
-    /* float: left; */
     text-align: center;
 }
 .contentWrap dl dt{
@@ -121,20 +129,21 @@ header .bigHeadBox img{
     color: #367c5b;
     font: bold 17px/23px sans-serif;
 }
-.experienceCont ul li .company{
-    width: 195px;
+.experienceCont .company{
+    width: 215px;
     margin: 0 15px 0 0;
 }
-.experienceCont ul li .workContent {
+.experienceCont .workContent {
     color: #888;
     font: 15px/20px sans-serif;
     margin: 0;
     border-left: 1px solid #ddd;
     padding: 0 0 0 15px;
-    width: 200px;
+    width: 305px;
 }
-.experienceCont ul li .companyName {
-    font: 15px/23px sans-serif;
+.experienceCont .company .companyName {
+    font: 15px/20px sans-serif;
+    color: #333;
 }
 
 /* .skillCont */
@@ -179,7 +188,11 @@ header .bigHeadBox img{
 }
 .educationCont p{
     color: #367c5b;
-    font: bold 15px/23px sans-serif;
+    font: bold 17px/25px sans-serif;
+}
+.educationCont .subTitle{
+    color: #333;
+    font: 15px/25px sans-serif;
 }
 
 /* languagesCont */
@@ -203,6 +216,13 @@ header .bigHeadBox img{
     padding: 5px;
     justify-content: center;
 }
+.languagesCont .chinese{
+    background: #d8e1cf;
+}
+.languagesCont .taiwanese{background: conic-gradient(#d8e1cf 0deg,#d8e1cf 324deg,transparent 324deg);}
+.languagesCont .english{
+    background: conic-gradient(#d8e1cf 180deg,#d8e1cf 180deg,transparent 180deg);
+}
 .languagesCont .langBox span {
     font: bold 15px/23px sans-serif;
     display: block;
@@ -219,11 +239,11 @@ header .bigHeadBox img{
     width: 23px;
     height: 23px;
 }
-.mottoCont span{
+.mottoCont p{
     color: #367c5b;
     font: bold 17px/25px sans-serif;
 }
-.mottoCont p{
+.mottoCont span{
     color: #333;
     font: 15px/25px sans-serif;
 }
@@ -245,4 +265,56 @@ header .bigHeadBox img{
     margin: 0;
     font: 15px/25px sans-serif;
     color: #333;
+}
+
+.autobiographyCont dt::before{
+    background: transparent url(img/autobiography.png)no-repeat center/100% auto;
+}
+
+
+@media screen and (max-width: 640px) {
+    header{
+        padding: 20px 0;
+    }
+    header .headerWrap{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .contentWrap{
+        padding: 30px 15px;
+    }
+    .basicDataBox{
+        margin: 20px 0 0 0;
+    }
+    .basicDataBox h1{
+        font-size: 25px;
+    }
+    .contentWrap dl dt{
+        text-align: left;
+    }
+    .experienceCont ul li .workDetail{
+        display: block;
+    }
+    .experienceCont .company{
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
+    .experienceCont ul li .workDetail.presentWork::after{
+        height: calc(100% - 20px);
+        bottom: 0;
+        left: -10px;
+    }
+    .experienceCont .workContent{
+        border: 0;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width:440px) {
+    .languagesCont dd{
+        justify-content: space-around;
+    }
+    .languagesCont .langBox{
+        margin: 0;
+    }
 }
