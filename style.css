@@ -291,6 +291,7 @@ header .bigHeadBox img{
 .workCont p{
     font: 15px/25px sans-serif;
     color: #333;
+    padding: 10px 0;
 }
 .workCont span{
     font: 12px/15px sans-serif;
@@ -337,6 +338,10 @@ header .bigHeadBox img{
 /* bottomCont */
 .bottomCont{
     border-top: 1px solid #ddd;
+}
+.bottomCont p{
+    font: bold 13px/15px sans-serif;
+    margin: 10px 0;
 }
 
 @media screen and (max-width: 640px) {
