@@ -280,6 +280,65 @@ header .bigHeadBox img{
     margin: 0 auto;
 }
 
+.autobiographyCont h5 {
+    font: bold 13px/25px sans-serif;
+}
+
+/* workCont */
+.workCont dt::before{
+    background: transparent url(img/suitcase.png)no-repeat center/100% auto;
+}
+.workCont p{
+    font: 15px/25px sans-serif;
+    color: #333;
+}
+.workCont span{
+    font: 12px/15px sans-serif;
+    color: #333;
+    display: inline-block;
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.workCont .workList {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 0 0 0;
+}
+.workCont .workList li {
+    width: 15%;
+    border: 5px solid #367c5b;
+    border-radius: 10px;
+    margin: 0 15px 0 0;
+    max-width: 140px;
+    position: relative;
+    background-color: #d8e1cf;
+}
+.workCont .workList li:last-child{
+    margin: 0;
+}
+.workCont .workList li::after{
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: #367c5b url(img/link.png)no-repeat 6px 5px/12px auto;
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    border-radius: 50% 0 0 0;
+}
+.workCont .workList li a{
+    display: inline-block;
+}
+.workCont .workList li img {
+    border-radius: 10px 10px 0 0;
+}
+/* bottomCont */
+.bottomCont{
+    border-top: 1px solid #ddd;
+}
+
 @media screen and (max-width: 640px) {
     header{
         padding: 20px 0;
@@ -320,6 +379,11 @@ header .bigHeadBox img{
         text-align: left;
         margin: 20px 0 10px 0;
     }
+    .workCont .workList li {
+        width: 18%;
+        max-width: unset;
+        margin: 0 10px 0 0;
+    }
 }
 
 @media screen and (max-width:440px) {
@@ -328,5 +392,16 @@ header .bigHeadBox img{
     }
     .languagesCont .langBox{
         margin: 0;
+    }
+    .workCont .workList{
+        justify-content: space-evenly;
+    }
+    
+    .workCont .workList li {
+        width: 35%;
+        margin: 0 15px 15px 0;
+    }
+    .workCont .workList li:nth-child(2n) {
+        margin: 0 0 15px 0;
     }
 }
