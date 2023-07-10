@@ -126,7 +126,7 @@ header .bigHeadBox img {
   left: -35px;
 }
 .experienceCont ul li .workDetail.presentWork::after {
-  height: 40px;
+  height: calc(100% - 10px);
 }
 .experienceCont ul li h3 {
   margin: 0;
